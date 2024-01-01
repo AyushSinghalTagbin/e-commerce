@@ -21,5 +21,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo Writing image definitions file...
+      - printf '[{"name":"ecommerce","imageUri":"902728622562.dkr.ecr.ap-south-1.amazonaws.com/ecommerce:latest"}]' > imagedefinitions.json
+
 artifacts:
-    files: imagedefinitions.json
+  files: imagedefinitions.json
