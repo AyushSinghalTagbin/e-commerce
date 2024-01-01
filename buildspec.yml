@@ -15,9 +15,15 @@ phases:
       - docker build -t ecommerce .
       - echo Image build completed.
       - echo Tagging the Docker image...
-      - docker tag ecommerce:latest 902728622562.dkr.ecr.ap-south-1.amazonaws.com/ecommerce:latest
+      - docker tag ecommerce:latest 902728622562.dkr.ecr.ap-south-1.amazonaws.com/ecommerce:latest  
       - echo Pushing the Docker image to Amazon ECR...
       - docker push 902728622562.dkr.ecr.ap-south-1.amazonaws.com/ecommerce:latest
   post_build:
     commands:
       - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  name: MyArtifact
+  discard-paths: no
+  base-directory: /usr/src/app/  # Set your base directory here
