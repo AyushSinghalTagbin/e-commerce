@@ -22,8 +22,6 @@ phases:
     commands:
       - echo Build completed on `date`
 artifacts:
+  base-directory: ./dist
   files:
     - '**/*'
-  name: MyArtifact
-  discard-paths: no
-  base-directory: /usr/src/app/dist  # Update the correct base directory path here
