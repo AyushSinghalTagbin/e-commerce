@@ -21,7 +21,7 @@ export class AppController {
   @Get()
 async getResponse(): Promise<any> {
   // await this.client.emit<any>('message_printed', { text: 'ayush' });
-  return { name: 'ayush' };
+  return { name: 'ayush singhal' };
 }
 
    
