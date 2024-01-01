@@ -4,7 +4,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 16
-      docker: 18  # or the version you are using
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
